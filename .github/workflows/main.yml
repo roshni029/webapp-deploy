@@ -21,9 +21,17 @@ jobs:
         with: 
           creds: ${{secrets.AZURE_CREDENTIALS}}
 
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+
+      - name: Install dependencies
+        run: npm ci    
+
       - name: build
         run: |
-          build --configuration release
+        npm run build 
           publish -c Release -o '${{ env.AZURE_WEBAPP_PATH}}/myapp' 
 
       - name: Deploy to App Service
