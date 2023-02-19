@@ -1,0 +1,33 @@
+name: Deploy index.html
+
+on:
+  push: 
+    branches:
+      - master
+
+env:
+  AZURE_WEBAPP_NAME: demowebapproshni1
+  AZURE_WEBAPP_PATH: '.'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: action/checkout
+
+      - name: Login via Azure CLI
+        uses: azure/login@v1
+        with: 
+          creds: ${{secrets.AZURE_CREDENTIALS}}
+
+      - name: build
+        run: |
+          build --configuration release
+          publish -c Release -o '${{ env.AZURE_WEBAPP_PATH}}/myapp' 
+
+      - name: Deploy to App Service
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{env.AZURE_WEBAPP_NAME}}  
+          package: '${{env.AZURE_WEBAPP_PATH}}/myapp'      
