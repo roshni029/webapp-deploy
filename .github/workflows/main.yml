@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  AZURE_WEBAPP_NAME: demowebapproshni1
+  AZURE_WEBAPP_NAME: firstdep
   AZURE_WEBAPP_PATH: '.'
 
 jobs:
