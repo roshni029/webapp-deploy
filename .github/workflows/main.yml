@@ -31,7 +31,7 @@ jobs:
 
       - name: build
         run: |
-        npm run build 
+          npm run build 
           publish -c Release -o '${{ env.AZURE_WEBAPP_PATH}}/myapp' 
 
       - name: Deploy to App Service
