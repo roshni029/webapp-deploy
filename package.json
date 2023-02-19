@@ -1,40 +1,23 @@
 {
-    "name": "webapp-deploy",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-      "react": "^16.0.0",
-      "react-dom": "^16.2.0",
-      "react-redux": "^8.0.5",
-      "react-router-dom": "^6.8.1",
-      "react-scripts": "5.0.1",
-      "reducers": "^3.0.0-alpha",
-      "redux": "^4.2.1",
-      "web-vitals": "^2.1.4"
-    },
-    "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "react-scripts test",
-      "eject": "react-scripts eject"
-    },
-    "eslintConfig": {
-      "extends": [
-        "react-app",
-        "react-app/jest"
-      ]
-    },
-    "browserslist": {
-      "production": [
-        ">0.2%",
-        "not dead",
-        "not op_mini all"
-      ],
-      "development": [
-        "last 1 chrome version",
-        "last 1 firefox version",
-        "last 1 safari version"
-      ]
-    }
+  "name": "webapp-deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roshni029/webapp-deploy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roshni029/webapp-deploy/issues"
+  },
+  "homepage": "https://github.com/roshni029/webapp-deploy#readme",
+  "dependencies": {
+    "express": "^4.18.2"
   }
-  
+}
